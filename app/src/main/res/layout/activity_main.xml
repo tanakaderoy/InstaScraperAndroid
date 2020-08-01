@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/link_input"
+        android:layout_width="404dp"
+        android:layout_height="162dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Insta Links"
+        android:inputType="textMultiLine"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/searching_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="53dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/link_input"
+        tools:text="Searching For" />
+
+    <ImageButton
+        android:id="@+id/search_button"
+        android:layout_width="93dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="6dp"
+        android:background="@android:color/black"
+        android:tint="@android:color/holo_blue_bright"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/link_input"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/insta_preview_list"
+        android:layout_width="409dp"
+        android:layout_height="0dp"
+        android:background="#516F91"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searching_text_view"
+        tools:listitem="@layout/insta_preview_cards" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
